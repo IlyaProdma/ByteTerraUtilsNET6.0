@@ -1,0 +1,12 @@
+D:\Desktop\ByteTerraUtils\bin\Release\net6.0\ByteTerraUtils.deps.json
+D:\Desktop\ByteTerraUtils\bin\Release\net6.0\ByteTerraUtils.dll
+D:\Desktop\ByteTerraUtils\bin\Release\net6.0\ByteTerraUtils.pdb
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.csproj.AssemblyReference.cache
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.AssemblyInfoInputs.cache
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.AssemblyInfo.cs
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.csproj.CoreCompileInputs.cache
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.dll
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ref\ByteTerraUtils.dll
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\ByteTerraUtils.pdb
+D:\Desktop\ByteTerraUtils\obj\Release\net6.0\refint\ByteTerraUtils.dll

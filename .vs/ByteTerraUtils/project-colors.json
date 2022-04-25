@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "16f3e3e8-c568-4f6c-b057-1275734eead1": {
+      "ProjectGuid": "16f3e3e8-c568-4f6c-b057-1275734eead1",
+      "DisplayName": "ByteTerraUtils",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

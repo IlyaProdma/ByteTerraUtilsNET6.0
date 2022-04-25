@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "2Fn6bJQNrEHpD+eDk0U8rxmpLqNWLmCZ/OXdOwGACG14B7fLT9TrowdH3gt9KxXm/AnTOPtg0Ryzl/CvQqRO0g==",
+  "success": true,
+  "projectFilePath": "D:\\Desktop\\ByteTerraUtils\\ByteTerraUtils.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aurum\\.nuget\\packages\\google.apis\\1.57.0\\google.apis.1.57.0.nupkg.sha512",
+    "C:\\Users\\Aurum\\.nuget\\packages\\google.apis.auth\\1.57.0\\google.apis.auth.1.57.0.nupkg.sha512",
+    "C:\\Users\\Aurum\\.nuget\\packages\\google.apis.core\\1.57.0\\google.apis.core.1.57.0.nupkg.sha512",
+    "C:\\Users\\Aurum\\.nuget\\packages\\google.apis.sheets.v4\\1.57.0.2657\\google.apis.sheets.v4.1.57.0.2657.nupkg.sha512",
+    "C:\\Users\\Aurum\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
