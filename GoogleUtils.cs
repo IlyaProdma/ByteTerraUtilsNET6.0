@@ -152,12 +152,12 @@ namespace ByteTerraUtils
             valueRange.MajorDimension = "ROWS";
             double avg = trackDetectorsInfo.Average();
             trackDetectorsInfo.Add(trackDetectorsInfo.Last());
-            for (int i = 1; i < trackDetectorsInfo.Count; ++i)
+            for (int i = trackDetectorsInfo.Count; i > 0; --i)
             {
                 trackDetectorsInfo[i] = trackDetectorsInfo[i - 1];
             }
             trackDetectorsInfo[0] = avg;
-            valueRange.Values = new List<IList<Object>> { trackDetectorsInfo.Select(dt => (Object)dt).ToList() };
+            valueRange.Values = new List<IList<Object>> { trackDetectorsInfo.Select(dt => (Object)dt.ToString("0.00E00").Insert(5, "+")).ToList() };
             SpreadsheetsResource.ValuesResource.UpdateRequest request = _SheetsService.Spreadsheets.Values.Update(valueRange, spreadSheetId, $"Data!H{index}:Q{index}");
             request.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.RAW;
             request.Execute();
@@ -170,12 +170,12 @@ namespace ByteTerraUtils
             valueRange.MajorDimension = "ROWS";
             double avg = onlineDetectorsInfo.Average();
             onlineDetectorsInfo.Add(onlineDetectorsInfo.Last());
-            for (int i = 1; i < onlineDetectorsInfo.Count; ++i)
+            for (int i = onlineDetectorsInfo.Count - 1; i > 0; --i)
             {
                 onlineDetectorsInfo[i] = onlineDetectorsInfo[i - 1];
             }
             onlineDetectorsInfo[0] = avg;
-            valueRange.Values = new List<IList<Object>> { onlineDetectorsInfo.Select(dt => (Object)dt).ToList() };
+            valueRange.Values = new List<IList<Object>> { onlineDetectorsInfo.Select(dt => (Object)dt.ToString("0.00E00").Insert(5, "+")).ToList() };
             SpreadsheetsResource.ValuesResource.UpdateRequest request = _SheetsService.Spreadsheets.Values.Update(valueRange, spreadSheetId, $"Data!R{index}:V{index}");
             request.ValueInputOption = SpreadsheetsResource.ValuesResource.UpdateRequest.ValueInputOptionEnum.RAW;
             request.Execute();

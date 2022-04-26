@@ -35,7 +35,7 @@ namespace ByteTerraUtils
             ProcessStartInfo startInfo = new ProcessStartInfo();
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = $"/C cd pyt && python main.py {jsonName} {template} {dirPath}/{outputName}";
+            startInfo.Arguments = $"/C cd pyt && python createdoc.py {jsonName} {template} {dirPath}/{outputName}";
             startInfo.UseShellExecute = true;
             process.StartInfo = startInfo;
             process.Start();
@@ -84,10 +84,6 @@ namespace ByteTerraUtils
             {
                 throw new InvalidOperationException("Not enough info");
             }
-            if (!session.OrgName.StartsWith("ПН"))
-            {
-                throw new InvalidOperationException("Wrong session");
-            }
             try
             {
                 ion = new Ion(ionInfo);
@@ -104,7 +100,7 @@ namespace ByteTerraUtils
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(protocolInfo, options);
             File.WriteAllText("pyt/temp.json", jsonString);
-            CreatePDF("temp.json", "dopusk.template", $"dopusk_{session.SessionId}", dirPath);
+            CreatePDF("temp.json", "dopusk.template", $"admission_{session.SessionId}", dirPath);
         }
 
         public void CreateMonitorReport(string spreadSheetId, int sessionId, string dirPath)
@@ -131,10 +127,6 @@ namespace ByteTerraUtils
             }
             Session session;
             Ion ion;
-            if (dataRow[1].ToString()!.StartsWith("ПН"))
-            {
-                throw new InvalidOperationException("Wrong session");
-            }
             try
             {
                 session = new Session(dataRow, timingRow);
@@ -181,7 +173,7 @@ namespace ByteTerraUtils
             var options = new JsonSerializerOptions { WriteIndented = true };
             string jsonString = JsonSerializer.Serialize(protocolInfo, options);
             File.WriteAllText("pyt/temp.json", jsonString);
-            CreatePDF("temp.json", "monitoring_nonstandard.template", $"monitoring_nonstandard_{session.SessionId}", dirPath);
+            CreatePDF("temp.json", "monitoring_nonstandard.template", $"monitoring_{session.SessionId}", dirPath);
         }
 
         private bool CanCreateProtocol(Session session, ProtocolType protocolType)
