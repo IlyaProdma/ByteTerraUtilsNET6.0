@@ -206,7 +206,7 @@ namespace ByteTerraUtils
             dataValues.Add(session.SessionId);
             dataValues.Add(session.OrgName);
             dataValues.AddRange(session.ObjTests);
-            dataValues.AddRange(Enumerable.Repeat("", (session.ObjTests.Select(t => t != "").Count() - 4)));
+            dataValues.AddRange(Enumerable.Repeat("", 4 - (session.ObjTests.Select(t => t != "").Count())));
             dataValues.Add(session.CodeEnv);
             dataValues.AddRange(Enumerable.Repeat("", 15));
             dataValues.Add(session.StreamIntensity);
